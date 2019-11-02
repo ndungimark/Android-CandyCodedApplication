@@ -1,8 +1,10 @@
 package com.pluralsight.candycoded;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
@@ -22,7 +24,12 @@ public class InfoActivity extends AppCompatActivity {
 
 
     }
+    public void createMapIntent(View view){
 
+        Uri uriAdress =Uri.parse("geo:0,0?q=618 E South St orlando,FL 32801");
+        Intent mapIntent=new Intent(Intent.ACTION_VIEW,uriAdress);
+
+    }
     // ***
     // TODO - Task 2 - Launch the Google Maps Activity
     // ***
